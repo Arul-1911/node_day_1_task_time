@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
       time: formattedTime,
     };
 
-    res.json(jsonResponse);
+    res.send(jsonResponse);
   } catch (error) {
     console.error("error in writing file", error);
     res.status(500).json({ error: "server error" });
